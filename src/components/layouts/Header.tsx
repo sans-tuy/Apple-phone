@@ -56,10 +56,10 @@ export default function Header() {
       // after sales
       const elementAfterSales = document.getElementById("aftersales");
       const afterSalesComponent = elementAfterSales?.getBoundingClientRect();
-      const afterSalesRange = afterSalesComponent?.top + window.scrollY - 200;
+      const afterSalesRange = afterSalesComponent && afterSalesComponent?.top + window.scrollY - 200;
 
       if (
-        window.scrollY <= afterSalesRange + 100 &&
+        afterSalesRange && window.scrollY <= afterSalesRange + 100 &&
         window.scrollY >= afterSalesRange - 100
       ) {
         setActiveNav("After Sales");
@@ -68,9 +68,9 @@ export default function Header() {
       // benefit
       const elementBenefit = document.getElementById("benefits");
       const benefitComponent = elementBenefit?.getBoundingClientRect();
-      const benefitRange = benefitComponent?.top + window.scrollY - 200;
+      const benefitRange = benefitComponent && benefitComponent?.top + window.scrollY - 200;
 
-      if (
+      if (benefitRange &&
         window.scrollY <= benefitRange + 100 &&
         window.scrollY >= benefitRange - 100
       ) {
@@ -80,9 +80,9 @@ export default function Header() {
       // contact
       const elementContact = document.getElementById("contact");
       const contactComponent = elementContact?.getBoundingClientRect();
-      const contactRange = contactComponent?.top + window.scrollY - 200;
+      const contactRange = contactComponent && contactComponent?.top + window.scrollY - 200;
 
-      if (
+      if (contactRange &&
         window.scrollY <= contactRange + 100 &&
         window.scrollY >= contactRange - 100
       ) {
