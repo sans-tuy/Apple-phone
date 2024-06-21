@@ -99,7 +99,7 @@ export default function Header() {
     return str.replace(/#/g, "");
   };
 
-  const handleScroll = (event, targetId) => {
+  const handleScroll = (event: any, targetId: string) => {
     event.preventDefault();
     const targetElement = document.getElementById(removeHash(targetId));
     if (targetElement) {
