@@ -32,7 +32,7 @@ export default function Header() {
       // home
       const elementHome = document.getElementById("home");
       const homeComponent = elementHome?.getBoundingClientRect();
-      const homeRange = homeComponent.top + window.scrollY - 200;
+      const homeRange = homeComponent?.top + window.scrollY - 200;
 
       if (
         window.scrollY <= homeRange + 200 &&
@@ -44,7 +44,7 @@ export default function Header() {
       // product
       const elementProduct = document.getElementById("products");
       const productComponent = elementProduct?.getBoundingClientRect();
-      const productRange = productComponent.top + window.scrollY - 200;
+      const productRange = productComponent?.top + window.scrollY - 200;
 
       if (
         window.scrollY <= productRange + 100 &&
@@ -56,7 +56,7 @@ export default function Header() {
       // after sales
       const elementAfterSales = document.getElementById("aftersales");
       const afterSalesComponent = elementAfterSales?.getBoundingClientRect();
-      const afterSalesRange = afterSalesComponent.top + window.scrollY - 200;
+      const afterSalesRange = afterSalesComponent?.top + window.scrollY - 200;
 
       if (
         window.scrollY <= afterSalesRange + 100 &&
@@ -68,7 +68,7 @@ export default function Header() {
       // benefit
       const elementBenefit = document.getElementById("benefits");
       const benefitComponent = elementBenefit?.getBoundingClientRect();
-      const benefitRange = benefitComponent.top + window.scrollY - 200;
+      const benefitRange = benefitComponent?.top + window.scrollY - 200;
 
       if (
         window.scrollY <= benefitRange + 100 &&
@@ -80,7 +80,7 @@ export default function Header() {
       // contact
       const elementContact = document.getElementById("contact");
       const contactComponent = elementContact?.getBoundingClientRect();
-      const contactRange = contactComponent.top + window.scrollY - 200;
+      const contactRange = contactComponent?.top + window.scrollY - 200;
 
       if (
         window.scrollY <= contactRange + 100 &&
