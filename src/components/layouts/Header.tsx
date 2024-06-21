@@ -32,9 +32,9 @@ export default function Header() {
       // home
       const elementHome = document.getElementById("home");
       const homeComponent = elementHome?.getBoundingClientRect();
-      const homeRange = homeComponent?.top + window.scrollY - 200;
+      const homeRange = homeComponent && homeComponent?.top + window.scrollY - 200;
 
-      if (
+      if (homeRange &&
         window.scrollY <= homeRange + 200 &&
         window.scrollY >= homeRange - 50
       ) {
@@ -44,9 +44,9 @@ export default function Header() {
       // product
       const elementProduct = document.getElementById("products");
       const productComponent = elementProduct?.getBoundingClientRect();
-      const productRange = productComponent?.top + window.scrollY - 200;
+      const productRange = productComponent && productComponent?.top + window.scrollY - 200;
 
-      if (
+      if (productRange &&
         window.scrollY <= productRange + 100 &&
         window.scrollY >= productRange - 100
       ) {
