@@ -32,9 +32,11 @@ export default function Header() {
       // home
       const elementHome = document.getElementById("home");
       const homeComponent = elementHome?.getBoundingClientRect();
-      const homeRange = homeComponent && homeComponent?.top + window.scrollY - 200;
+      const homeRange =
+        homeComponent && homeComponent?.top + window.scrollY - 200;
 
-      if (homeRange &&
+      if (
+        homeRange &&
         window.scrollY <= homeRange + 200 &&
         window.scrollY >= homeRange - 50
       ) {
@@ -44,9 +46,11 @@ export default function Header() {
       // product
       const elementProduct = document.getElementById("products");
       const productComponent = elementProduct?.getBoundingClientRect();
-      const productRange = productComponent && productComponent?.top + window.scrollY - 200;
+      const productRange =
+        productComponent && productComponent?.top + window.scrollY - 200;
 
-      if (productRange &&
+      if (
+        productRange &&
         window.scrollY <= productRange + 100 &&
         window.scrollY >= productRange - 100
       ) {
@@ -56,10 +60,12 @@ export default function Header() {
       // after sales
       const elementAfterSales = document.getElementById("aftersales");
       const afterSalesComponent = elementAfterSales?.getBoundingClientRect();
-      const afterSalesRange = afterSalesComponent && afterSalesComponent?.top + window.scrollY - 200;
+      const afterSalesRange =
+        afterSalesComponent && afterSalesComponent?.top + window.scrollY - 200;
 
       if (
-        afterSalesRange && window.scrollY <= afterSalesRange + 100 &&
+        afterSalesRange &&
+        window.scrollY <= afterSalesRange + 100 &&
         window.scrollY >= afterSalesRange - 100
       ) {
         setActiveNav("After Sales");
@@ -68,9 +74,11 @@ export default function Header() {
       // benefit
       const elementBenefit = document.getElementById("benefits");
       const benefitComponent = elementBenefit?.getBoundingClientRect();
-      const benefitRange = benefitComponent && benefitComponent?.top + window.scrollY - 200;
+      const benefitRange =
+        benefitComponent && benefitComponent?.top + window.scrollY - 200;
 
-      if (benefitRange &&
+      if (
+        benefitRange &&
         window.scrollY <= benefitRange + 100 &&
         window.scrollY >= benefitRange - 100
       ) {
@@ -80,9 +88,11 @@ export default function Header() {
       // contact
       const elementContact = document.getElementById("contact");
       const contactComponent = elementContact?.getBoundingClientRect();
-      const contactRange = contactComponent && contactComponent?.top + window.scrollY - 200;
+      const contactRange =
+        contactComponent && contactComponent?.top + window.scrollY - 200;
 
-      if (contactRange &&
+      if (
+        contactRange &&
         window.scrollY <= contactRange + 100 &&
         window.scrollY >= contactRange - 100
       ) {
@@ -184,6 +194,12 @@ export default function Header() {
             {theme === "light" ? <BsMoon size="20px" /> : <CiSun size="20px" />}
           </button>
         </motion.div> */}
+
+        <button
+          className={`rounded-md px-4 py-1 text-lg btn btn-outline btn-info transition-all duration-300 ${isScroll ? " text-white" : " text-black"} `}
+        >
+          Login
+        </button>
 
         {isOpenModal && <MobileNavbar close={handleCLoseModal} />}
 

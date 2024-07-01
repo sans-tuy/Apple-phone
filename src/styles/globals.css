@@ -26,6 +26,12 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.btn-detail .arrow-icon:hover {
+  transform: translateX(0.5rem);
+  transition: 0.5s;
+  animation-duration: 300ms;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

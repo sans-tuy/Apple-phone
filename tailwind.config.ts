@@ -74,6 +74,15 @@ const config: Config = {
       animation: ["responsive", "hover", "focus"],
     },
   },
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          info: "#3d4451",
+        },
+      },
+    ],
+  },
   plugins: [daisyui],
 };
 export default config;

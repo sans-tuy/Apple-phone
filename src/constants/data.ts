@@ -1,4 +1,4 @@
-export const navbarData = [
+const navbarData = [
   { title: "Home", href: "#home" },
   { title: "Products", href: "#products" },
   { title: "After Sales", href: "#aftersales" },
@@ -6,7 +6,7 @@ export const navbarData = [
   { title: "Contact", href: "#contact" },
 ];
 
-export const homeData = {
+const homeData = {
   slogan: [
     "Advanced Photography",
     "Ultimate Performance",
@@ -16,3 +16,20 @@ export const homeData = {
   ],
   profil_image: "/images/ip_asset-removebg-preview.png",
 };
+
+const filterProduct = [
+  {
+    title: "All",
+    value: "all",
+  },
+  {
+    title: "New",
+    value: "new",
+  },
+  {
+    title: "Populer",
+    value: "populer",
+  },
+];
+
+export { filterProduct, navbarData, homeData };
